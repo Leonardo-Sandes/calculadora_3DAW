@@ -116,7 +116,7 @@ function e($v) { return htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8'); }
             }
 
             if (valA === '' || valB === '') {
-                dispararErro('⚠️ Preencha os dois campos antes de calcular!');
+                dispararErro('Preencha os dois campos antes de calcular!');
                 return;
             }
 
@@ -124,22 +124,22 @@ function e($v) { return htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8'); }
             const numB = parseFloat(valB.replace(',', '.'));
 
             if (isNaN(numA) || isNaN(numB)) {
-                dispararErro('⚠️ Por favor, digite apenas números válidos!');
+                dispararErro('Por favor, digite apenas números válidos!');
                 return;
             }
 
             if (operacao === '/' && numB === 0) {
-                dispararErro('⚠️ Não é possível dividir um número por zero!');
+                dispararErro('Não é possível dividir um número por zero!');
                 return;
             }
 
             if (operacao === 'raiz') {
                 if (numB <= 0) {
-                    dispararErro('⚠️ O índice da raiz (Número B) deve ser maior que zero!');
+                    dispararErro('O índice da raiz (Número B) deve ser maior que zero!');
                     return;
                 }
                 if (numA < 0 && numB % 2 === 0) {
-                    dispararErro('⚠️ Raiz par de número negativo não existe no conjunto dos Reais!');
+                    dispararErro('Raiz par de número negativo não existe no conjunto dos Reais!');
                     return;
                 }
             }
